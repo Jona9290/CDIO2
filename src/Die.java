@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class Die {
     private int MAX = 6;
+    private int faceValue;
 
     /**
      * A constructor is created
@@ -17,9 +18,12 @@ public class Die {
     public int roll() {
 
         Random diceRoller = new Random();
-        int faceValue = diceRoller.nextInt(MAX) + 1;
+        faceValue = diceRoller.nextInt(MAX) + 1;
 
         return faceValue;
     }
 
+    public int getFaceValue() {
+        return faceValue;
+    }
 }

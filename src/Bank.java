@@ -11,6 +11,10 @@ public class Bank {
         }
     }
 
+    public ArrayList<Account> getAccounts() {
+        return accounts;
+    }
+
     public class Account{
         private Player owner;
         private int balance;
