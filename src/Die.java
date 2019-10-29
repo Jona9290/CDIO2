@@ -1,5 +1,3 @@
-package com.company;
-
 import java.util.Random;
 
 public class Die {
@@ -9,6 +7,7 @@ public class Die {
      * A constructor is created
      */
     public Die() {
+
     }
 
     /**

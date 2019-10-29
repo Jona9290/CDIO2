@@ -1,4 +1,3 @@
-package com.company;
 
 public class Color {
     public static final String ANSI_RESET = "\u001B[0m";
