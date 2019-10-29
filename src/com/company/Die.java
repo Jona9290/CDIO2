@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Die {
     private final int MAX = 6;
+    public int roll;
 
     /**
      * A constructor is created
