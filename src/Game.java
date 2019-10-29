@@ -16,10 +16,10 @@ public class Game {
         fields = new ArrayList<>();
         fields.add(new Gamefield(250,"Tower", "You have found an abandoned tower and a chest filled with krugerrands - receive 250 gold"));
         fields.add(new Gamefield(-100,"Crater", "you have just heard the sirens go off followed by a loud bang!, to your surprise, a nazi bomb have left a crater 50 meters away from you - you lose 100 gold in your confusion"));
-        fields.add(new Gamefield(100,"Palace gates", "You wake up to guards throwing you at the gates, last night you drank a little to much and went home with the princess - receive 100 gold"));
+        fields.add(new Gamefield(100,"Palace gates", "You wake up to royal guards throwing you at the gate. Last night you drank a little to much and went home with the princess - receive 100 gold"));
         fields.add(new Gamefield(-20,"Cold Desert", "You booked the wrong flight and ended up near the south pole, you forgot all your winter clothing - lose 20 gold"));
         fields.add(new Gamefield(180,"Walled city", "Uncle Sam has been calling you, so you come visit. Your friend Mike Pence is happy to see you - receive 180 gold Mike Pence received from a pharmaceutical company"));
-        fields.add(new Gamefield(0,"Monastery", "You read a little to much buddhism and decided to visit Dalai Lama, it was disappointing - you neither lose nor gain any gold"));
+        fields.add(new Gamefield(0,"Monastery", "You have read a little to much buddhism and has decided to visit Dalai Lama, it was disappointing - you neither lose nor gain any gold"));
         fields.add(new Gamefield(-70,"Black cave","You went to Harlem and got robbed - you lose 70 gold"));
         fields.add(new Gamefield(60,"Huts in the mountains", "You won a trip to a budget mountain spa - receive 60 gold"));
         fields.add(new Gamefield(-80,"The Werewall (Werewolf wall)", "Your best friend convinced you to drop acid - you lose 80 gold but you get an extra throw"));
