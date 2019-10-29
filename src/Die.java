@@ -1,13 +1,13 @@
 import java.util.Random;
 
 public class Die {
-    private final int MAX = 6;
+    private int MAX = 6;
 
     /**
      * A constructor is created
      */
-    public Die() {
-
+    public Die(int diesides) {
+        MAX = diesides;
     }
 
     /**
@@ -17,7 +17,7 @@ public class Die {
     public int roll() {
 
         Random diceRoller = new Random();
-        int faceValue = diceRoller.nextInt(6) + 1;
+        int faceValue = diceRoller.nextInt(MAX) + 1;
 
         return faceValue;
     }
