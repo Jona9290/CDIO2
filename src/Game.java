@@ -38,8 +38,11 @@ public class Game {
         while (count < 1000) {
             int value1 = die1.roll();
             int value2 = die2.roll();
+            int value3 = value1 + value2;
+            value3 = value3 % fields.size();
             System.out.println(Color.ANSI_GREEN + value1 + Color.ANSI_RESET);
             System.out.println(Color.ANSI_YELLOW + value2 + Color.ANSI_RESET);
+            System.out.println(value3 + " er din endelige plads på pladen");
             count++;
         }
 
