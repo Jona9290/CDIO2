@@ -40,6 +40,10 @@ public class Bank {
         public void setBalance(int balance) {
             this.balance = balance;
         }
+
+        public void updateBalance(int gold){
+            this.balance += gold;
+        }
     }
 
 }
