@@ -31,7 +31,7 @@ public class Game {
         int count = 0;
         scan = new Scanner(System.in);
 
-        System.out.println("indtast hvor mange sider terningen skal have");
+        System.out.println("Write how many sides the dice should contain");
         sides = scan.nextInt();
         die1 = new Die(sides);
         die2 = new Die(sides);
@@ -42,7 +42,7 @@ public class Game {
             value3 = value3 % fields.size();
             System.out.println(Color.ANSI_GREEN + value1 + Color.ANSI_RESET);
             System.out.println(Color.ANSI_YELLOW + value2 + Color.ANSI_RESET);
-            System.out.println(value3 + " er din endelige plads på pladen");
+            System.out.println("You landed on field" + value3 + "");
             count++;
         }
 
@@ -61,7 +61,7 @@ public class Game {
         }
         bank = new Bank(playerlist);
 
-        System.out.println("indtast hvor mange sider terningen skal have");
+        System.out.println("Write how many sides you want the dice to have");
         sides = scan.nextInt();
         die1 = new Die(sides);
         die2 = new Die(sides);
