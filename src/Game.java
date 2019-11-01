@@ -50,7 +50,11 @@ public class Game {
 
     public void start() {
         scan = new Scanner(System.in);
-
+        /*
+         * we scan the number of players they wish to play. a player list is then created in the form of an arraylist
+         * when we ask them to type the names of the players.
+         * Furthermore a list of accounts chained to the playerlist.
+         */
         System.out.println("Write number of players");
         players = scan.nextInt();
         scan.nextLine();
@@ -62,11 +66,18 @@ public class Game {
         }
         bank = new Bank(playerlist);
 
+        /*
+         * The program then asks how many dice sides the players want to play with.
+         */
         System.out.println("Write how many sides you want the dice to have");
         sides = scan.nextInt();
         die1 = new Die(sides);
         die2 = new Die(sides);
         scan.nextLine();
+        /*
+         * the program then has a loop thats bound to the winningcondition.
+         * a for loop is created to make the players take turn until the while loop´s condition is fulfilled.
+         */
         while (!winningCondition()){
             for (Bank.Account a:bank.getAccounts()){
                 System.out.println(" ");
@@ -81,7 +92,10 @@ public class Game {
         }
 
     }
-
+    /**
+     * This function rolls the dice from input and finds the corresponding field.
+     *
+     */
     public int rollDie(Die d1, Die d2){
         int value = d1.roll() + d2.roll();
         System.out.println("You rolled: " + d1.getFaceValue() + " and " + d2.getFaceValue());
@@ -89,6 +103,9 @@ public class Game {
         value = value % fields.size();
         int returnvalue = fields.get(value).getFieldvalue();
         System.out.println(fields.get(value).getFieldname() + " - " + fields.get(value).getAdventureText());
+        /*
+         * We have a recursive statement which gives the player an extra turn if the condition is fulfilled(in this case, landing on field 8)
+         */
         if(value == 8){
             returnvalue += rollDie(d1,d2);
 
@@ -96,7 +113,9 @@ public class Game {
         return returnvalue;
     }
 
-
+    /*
+     * The winning condition is defined.
+     */
     public boolean winningCondition(){
         for(Bank.Account a:bank.getAccounts()){
             if(a.getBalance() >= 3000){
